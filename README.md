@@ -71,6 +71,11 @@ xiaohongshu_spider/
 │   ├── schemas/                 # 数据模式模块（Pydantic）
 │   ├── services/                # 业务服务模块
 │   └── utils/                   # 工具类模块
+├── data/                        # 数据目录
+│   ├── README.md                # 数据目录说明
+│   └── notes/                   # 笔记数据目录
+│       ├── result_note.md       # 爬取的笔记数据（Markdown 格式）
+│       └── bug.md               # 爬虫过程中遇到的问题及解决方案记录
 ├── db/                          # 数据库脚本
 │   └── schema.sql               # 数据库表结构定义
 ├── docs/                        # 文档目录
@@ -480,6 +485,15 @@ python -c "from app.db.conn import check_db_connection; import asyncio; asyncio.
 - MinIO 客户端支持异步操作
 - 自动创建存储桶
 - 支持预签名URL生成
+
+## 📁 数据目录说明
+
+项目包含一个 `data/` 目录，用于存放爬取的结果数据：
+
+- `data/notes/` - 存放爬取的笔记数据，以 Markdown 格式保存
+- `data/notes/bug.md` - 记录爬虫过程中遇到的问题及解决方案
+
+数据目录已在 `.gitignore` 中被忽略，不会提交到版本控制系统中。
 
 ## ⚠️ 注意事项
 
